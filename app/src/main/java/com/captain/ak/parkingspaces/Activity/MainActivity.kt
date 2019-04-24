@@ -4,6 +4,7 @@ import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.captain.ak.parkingspaces.Adapters.MainPagerAdapter
 import com.captain.ak.parkingspaces.R
 import com.captain.ak.parkingspaces.databinding.ActivityMainBinding
 import com.google.firebase.FirebaseApp
@@ -24,6 +25,11 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
 
         mAuth = FirebaseAuth.getInstance()
+
+        val fragmentAdapter = MainPagerAdapter(supportFragmentManager)
+        binding.mainPager.adapter = fragmentAdapter
+        binding.tabsMain.setupWithViewPager(binding.mainPager)
+
 
     }
 
