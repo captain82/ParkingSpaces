@@ -74,7 +74,7 @@ class SignupActivity : AppCompatActivity() {
 
                     userMap["thumb image"] = "default"
 
-                    database.setValue(userMap).addOnCompleteListener{ task->
+                    database.setValue(userMap).addOnCompleteListener{task->
                     if (task.isComplete) {
                         val mainIntent = Intent(this, MainActivity::class.java)
                         mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
