@@ -68,11 +68,7 @@ class SignupActivity : AppCompatActivity() {
 
                     userMap["name"] = name
 
-                    userMap["status"] = "Hey there! I am using Bro chat"
-
-                    userMap["image"] = "default"
-
-                    userMap["thumb image"] = "default"
+                    userMap["count"] = "0"
 
                     database.setValue(userMap).addOnCompleteListener{task->
                     if (task.isComplete) {

@@ -3,18 +3,18 @@ package com.captain.ak.parkingspaces.Models;
 import com.google.firebase.database.IgnoreExtraProperties;
 
 public class UserModel {
-    private String image,name;
+    private String count,name;
 
     public UserModel(){
 
     }
 
-    public String getImage() {
-        return image;
+    public String getCount() {
+        return count;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setCount(String count) {
+        this.count = count;
     }
 
     public String getName() {
