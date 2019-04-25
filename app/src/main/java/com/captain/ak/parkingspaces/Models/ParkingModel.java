@@ -2,10 +2,26 @@ package com.captain.ak.parkingspaces.Models;
 
 public class ParkingModel {
 
-    private String lattitude,longitude;
+    public String address,description,lattitude,longitude,slots;
 
     public ParkingModel(){
 
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getLattitude() {
@@ -22,5 +38,13 @@ public class ParkingModel {
 
     public void setLongitude(String longitude) {
         this.longitude = longitude;
+    }
+
+    public String getSlots() {
+        return slots;
+    }
+
+    public void setSlots(String slots) {
+        this.slots = slots;
     }
 }

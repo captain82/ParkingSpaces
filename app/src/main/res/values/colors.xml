@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-    <color name="colorPrimary">@color/blue_black_light</color>
-    <color name="colorPrimaryDark">@color/black</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">@color/fb</color>
+    <color name="colorPrimaryDark">@color/fb</color>
+    <color name="colorAccent">#000000</color>
     <color name="light_gray">#dbdbdb</color>
     <color name="gray">#7e7e7e</color>
     <color name="semi_gray">#979797</color>
@@ -15,7 +15,7 @@
     <color name="shadow">#d0d8dc</color>
     <color name="transparent">#00000000</color>
     <color name="translucent_white">#88ffffff</color>
-    <color name="fb">#3b5998</color>
+    <color name="fb">#2979FF</color>
     <color name="google">#d34836</color>
 
     <!--Design colors-->
