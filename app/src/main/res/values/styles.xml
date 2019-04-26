@@ -11,7 +11,7 @@
     </style>
     <style name="Button.Primary" parent="Base.TextAppearance.AppCompat.Widget.Button">
         <item name="android:textColor">@color/white</item>
-        <item name="android:background">@color/black_effective</item>
+        <item name="android:background">@drawable/btn_back_log_in</item>
     </style>
 
 
