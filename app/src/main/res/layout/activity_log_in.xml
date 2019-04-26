@@ -19,7 +19,7 @@
     <android.support.design.widget.AppBarLayout
             android:id="@+id/tab"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="160dp"
             android:layout_marginTop="0dp"
             android:background="@color/colorPrimary"
             app:tabTextColor="@color/white"
@@ -30,19 +30,31 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="0dp">
 
+        <ImageView android:layout_width="50dp"
+                   android:layout_height="50dp"
+                   android:layout_marginStart="20dp"
+                   android:layout_marginBottom="10dp"
+                   android:src="@drawable/ic_no_parking"
+        />
+
         <TextView android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:text="Parking Spaces"
                   android:textColor="@color/white"
                   android:textSize="30dp"
-                  android:layout_marginStart="10dp"
+                  android:fontFamily="@font/futur"
+                  android:layout_marginStart="20dp"
+                  android:layout_marginEnd="20dp"
                   android:textStyle="bold"
         />
         <TextView android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:textSize="15dp"
-                  android:layout_marginStart="10dp"
+                  android:layout_marginStart="20dp"
+                  android:layout_marginEnd="20dp"
                   android:textColor="@color/white"
+                  android:fontFamily="@font/futur"
+
                   android:layout_marginTop="5dp"
                   android:text="Search for parking spots around the city"/>
 
@@ -56,11 +68,13 @@
               android:layout_height="wrap_content"
               app:layout_constraintEnd_toEndOf="parent"
               android:layout_marginEnd="20dp"
-              android:layout_marginTop="20dp"
-                app:layout_constraintTop_toBottomOf="@id/tab"
+              android:layout_marginTop="30dp"
+              android:fontFamily="@font/futur"
+
+              app:layout_constraintTop_toBottomOf="@id/tab"
               app:layout_constraintStart_toStartOf="parent"
               android:layout_marginStart="20dp"
-              android:hint="Email"
+              android:hint="Email ID"
 
               android:id="@+id/email_editText"
               tools:layout_editor_absoluteY="150dp"/>
@@ -69,36 +83,55 @@
               android:layout_height="wrap_content"
               android:id="@+id/pass_editText"
 
+              android:fontFamily="@font/futur"
+
               app:layout_constraintEnd_toEndOf="parent"
               android:layout_marginEnd="20dp"
               app:layout_constraintStart_toStartOf="parent"
               android:layout_marginStart="20dp"
               android:layout_marginTop="30dp"
-              android:hint="password"
+              android:hint="Password"
               app:layout_constraintTop_toBottomOf="@id/email_editText"
 
     />
 
-    <Button android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:text="Log In"
-            android:id="@+id/login_btn"
-            app:layout_constraintTop_toBottomOf="@id/pass_editText"
+    <Button
+            android:id="@+id/loginBtn"
+            style="@style/Button.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:text="LogIn"
+            android:textSize="12dp"
+            android:fontFamily="@font/futur"
 
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp"/>
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/pass_editText"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
 
-    <Button android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/login_signup"
-            app:layout_constraintTop_toBottomOf="@id/pass_editText"
-            app:layout_constraintStart_toEndOf="@id/login_btn"
-            android:layout_marginTop="50dp"
-            android:layout_marginStart="30dp"
-            android:text="Sign UP"
-    />
+    <Button
+            android:id="@+id/loginSignup"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_signup"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:fontFamily="@font/futur"
+
+            android:text=" Or   Sign up"
+            android:textSize="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/loginBtn"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
 
 </android.support.constraint.ConstraintLayout>

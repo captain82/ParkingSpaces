@@ -4,6 +4,7 @@ import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import com.captain.ak.parkingspaces.R
 import com.captain.ak.parkingspaces.databinding.ActivityUpdateDetailsBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -60,6 +61,9 @@ class UpdateDetails : AppCompatActivity() {
 
             databaseRef.child(mAuth.currentUser!!.uid).child("saved_parking").child(position)
                 .child("slots").setValue(binding.slotEditText.text.toString())
+
+            Toast.makeText(this@UpdateDetails,"Details updated" , Toast.LENGTH_SHORT).show()
+            onBackPressed()
 
 
         }

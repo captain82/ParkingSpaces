@@ -13,18 +13,26 @@
 
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="match_parent"
-                  android:orientation="vertical">
+                  android:orientation="vertical"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    android:layout_marginBottom="20dp">
 
         <EditText
                 android:id="@+id/add_editText"
                 android:layout_width="match_parent"
+                android:hint="Address"
                   android:layout_height="wrap_content"
+                android:textColor="@color/black_effective"
                 android:layout_marginTop="20dp"/>
 
         <EditText
                 android:id="@+id/des_editText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:hint="Description"
+                android:textColor="@color/black_effective"
+
                 android:layout_marginTop="10dp"
         />
 
@@ -32,14 +40,19 @@
                 android:id="@+id/slot_editText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:hint="Slots"
+                android:textColor="@color/black_effective"
+
                 android:layout_marginTop="10dp"
         />
 
         <Button android:id="@+id/btn"
-                android:layout_width="100dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:text="update"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_signup"
                 android:layout_gravity="center"/>
 
     </LinearLayout>

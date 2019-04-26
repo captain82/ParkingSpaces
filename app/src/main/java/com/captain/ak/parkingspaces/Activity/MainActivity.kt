@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         supportActionBar!!.elevation = 0F
 
 
+
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
 
         mAuth = FirebaseAuth.getInstance()
