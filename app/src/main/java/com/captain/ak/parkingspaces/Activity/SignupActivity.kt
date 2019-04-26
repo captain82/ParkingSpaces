@@ -30,6 +30,11 @@ class SignupActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
 
+        supportActionBar!!.elevation = 0F
+
+        supportActionBar!!.setDisplayShowTitleEnabled(false)
+
+
         binding = DataBindingUtil.setContentView(this, R.layout.activity_signup)
 
         mAuth = FirebaseAuth.getInstance()
