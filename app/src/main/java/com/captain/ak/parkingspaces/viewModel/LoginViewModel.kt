@@ -60,6 +60,7 @@ open class LoginViewModel( var loginResultCallbacks: LoginResultCallbacks) : Vie
             loginResultCallbacks.onError("Password must be greater than 6 characters")
         } else {
             loginResultCallbacks.onSuccess("Login Success")
+            loginResultCallbacks.login()
         }
     }
 }

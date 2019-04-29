@@ -6,4 +6,6 @@ interface LoginResultCallbacks {
 
     fun onError(message: String)
 
+    fun login()
+
 }

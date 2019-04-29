@@ -27,8 +27,10 @@ class LogInActivity : AppCompatActivity(),LoginResultCallbacks {
     }
 
     override fun onError(message: String) {
+
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
+
 
 
     lateinit var binding: ActivityLogInBinding
@@ -36,7 +38,6 @@ class LogInActivity : AppCompatActivity(),LoginResultCallbacks {
     lateinit var mAuth: FirebaseAuth
 
     lateinit var userdatabase: DatabaseReference
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -68,17 +69,18 @@ class LogInActivity : AppCompatActivity(),LoginResultCallbacks {
 
         binding.loginSignup.setOnClickListener { sendToRegister() }
 
-       // binding.loginBtn.setOnClickListener { login() }
     }
 
-    private fun login() {
+    override fun login() {
 
         var email: String = binding.emailEditText.text.toString()
 
         var password: String = binding.passEditText.text.toString()
 
         if (!TextUtils.isEmpty(email) || !TextUtils.isEmpty(password)) {
+
             loginUser(email, password)
+
         }
 
 
