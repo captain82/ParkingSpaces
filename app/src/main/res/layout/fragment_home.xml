@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+        <variable
+                name="viewModel"
+                type="com.captain.ak.parkingspaces.viewModel.HomeFragmentViewModel">
+        </variable>
+    </data>
+
+
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
@@ -34,8 +45,11 @@
             android:fontFamily="@font/futur"
             android:text="Add new parking space"
             android:textSize="12dp"
+            android:onClick="@{viewModel::addnewBtnClicked}"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="15dp"
 />
 </FrameLayout>
+
+</layout>
