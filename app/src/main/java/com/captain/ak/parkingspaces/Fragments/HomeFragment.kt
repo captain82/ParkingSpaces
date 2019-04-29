@@ -10,12 +10,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.captain.ak.parkingspaces.Activity.AddPlacesActivity
+import com.captain.ak.parkingspaces.Activity.MainActivity
 import com.captain.ak.parkingspaces.Interface.HomeFragmentCallbacks
 
 import com.captain.ak.parkingspaces.R
 import com.captain.ak.parkingspaces.databinding.FragmentHomeBinding
 import com.captain.ak.parkingspaces.viewModel.HomeFragmentViewModel
 import com.captain.ak.parkingspaces.viewModel.HomeFragmentViewModelFactory
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_home.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -30,6 +32,8 @@ private const val ARG_PARAM2 = "param2"
 class HomeFragment : Fragment(),HomeFragmentCallbacks {
 
     lateinit var binding:FragmentHomeBinding
+
+    lateinit var mAuth:FirebaseAuth
 
 
     override fun onCreateView(
@@ -52,6 +56,13 @@ class HomeFragment : Fragment(),HomeFragmentCallbacks {
     override fun addNewSpace() {
         val intent = Intent(context,AddPlacesActivity::class.java)
         startActivity(intent)
+    }
+
+    override fun logout() {
+        FirebaseAuth.getInstance().signOut()
+        val intent = Intent(context,MainActivity::class.java)
+        startActivity(intent)
+        onDestroy()
     }
 
 

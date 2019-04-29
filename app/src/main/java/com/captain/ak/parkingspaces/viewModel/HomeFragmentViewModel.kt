@@ -10,6 +10,10 @@ class HomeFragmentViewModel(var homeFragmentCallbacks: HomeFragmentCallbacks):Vi
     {
         homeFragmentCallbacks.addNewSpace()
     }
+    fun logoutBtn(view: View)
+    {
+        homeFragmentCallbacks.logout()
+    }
 
 
 
