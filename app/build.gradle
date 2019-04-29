@@ -45,5 +45,7 @@ dependencies {
     implementation 'com.firebaseui:firebase-ui-database:3.3.0'
 
     implementation 'com.google.android.gms:play-services:12.0.1'
+
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
 }
 apply plugin: 'com.google.gms.google-services'
